@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from './Header'
-import Home from "./Home";
-import HackerNews from "./HackerNews";
+import Header from './Header.js'
+import Home from "./Home.js";
+import HackerNews from "./HackerNews.js";
 import { Router } from "@reach/router"
 
 import './App.css';

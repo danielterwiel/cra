@@ -7,9 +7,15 @@ export default function() {
 
   return (
     <>
-      <h1>Hacker News page {page + 1}</h1>
+      <h1>Hacker News page - first {(page + 1) * 10} posts</h1>
+      {error && <div>ERROR</div>}
       <div>
-        <button onClick={() => setPage(page + 1)}>Next Page</button>
+        <ul>
+          {posts.map(post => <li key={post.id}>{post.title}</li>)}
+        </ul>
+      </div>
+      <div>
+        <button disabled={loading} onClick={() => setPage(page + 1)}>Load more posts</button>
       </div>
     </>
   );
